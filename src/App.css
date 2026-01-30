@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+/* ===============================
+   SCROLL GLOBAL – ESTILO NATURAL
+   =============================== */
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1f4d3a #e6f2da;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e6f2da; /* verde claro */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f4d3a; /* verde escuro */
+  border-radius: 20px;
+  border: 2px solid #e6f2da;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #163a2c;
+}
+
+/* ===============================
+   OPCIONAL – ANIMAÇÃO AO SCROLL
+   =============================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

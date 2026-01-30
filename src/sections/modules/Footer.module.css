@@ -1,0 +1,58 @@
+.contain{
+    height: 90vh;
+    width: 100vw;
+    background-image: url("../images/footerimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15vw;
+
+}
+
+.content{
+    background: #E2F0D6;
+    border-radius: 2vw;
+    width: 85vw;
+    height: 65%;
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-around;
+    color: #214635;
+    font-weight: 500;
+    align-items: center;
+    margin-left: -3vw;
+}
+
+.logop{
+    height: 115%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logop img{
+    width: 80%;
+}
+
+.escrita{
+    display: flex;
+    gap: 4vw;
+    margin-top: -5vw;
+
+}
+
+.buttoncontact{
+    border: solid .1vw #214635;
+    padding: 1vw 2vw;
+    border-radius: .5vw;
+    transition: 1s;
+}
+
+.buttoncontact:hover{
+    color: #E2F0D6;
+    background: #214635;
+    transition: 1s;
+}
