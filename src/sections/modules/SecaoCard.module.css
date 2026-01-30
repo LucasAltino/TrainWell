@@ -1,0 +1,100 @@
+.SecaoCard {
+    display: flex;
+    flex-wrap: wrap;         /* Permite que os cards pulem para a próxima linha */
+    justify-content: center; /* Centraliza o bloco todo na página */
+    margin-top: -4vh;
+    gap: 3vw 10vw;               /* O espaço que faltava para completar os 80vw */
+    width: 100%;             /* Garante que o flex ocupe a largura total */
+    padding: 60px 0;         /* Espaçamento vertical entre as seções */
+    box-sizing: border-box;
+}
+
+.LogoImg {
+    width: 25vw;
+    height: 8vw;
+    background: url("/src/sections/images/logon.png") no-repeat;
+    background-size: contain;
+    transition: 1s;
+}
+
+.LogoArea {
+    width: 35vw;             /* Mesma largura do seu CardMed */
+    height: 20vw;            /* Mesma altura do seu CardMed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    transition: 1s;
+    border-radius: 20px;
+
+}
+
+.LogoArea:hover{
+    border-radius: 20px;
+    background-color: #214635;
+    transition: 1s;
+}
+
+.LogoArea:hover .LogoImg{
+    background: url("/src/sections/images/logon2.png") no-repeat;
+    background-size: contain;
+
+    transition: 1s;
+}
+
+.LogoTexto {
+    font-family: "League Spartan", sans-serif;
+    font-size: 3vw;          /* Fonte proporcional ao tamanho do card */
+    color: #214635;
+    font-weight: bold;
+    margin-top: 3vw;
+}
+
+/* ... seu código anterior ... */
+
+@media (max-width: 768px) {
+    .SecaoCard {
+        flex-direction: column; /* Muda a direção para COLUNA (um embaixo do outro) */
+        align-items: center;    /* Centraliza os cards na tela */
+        gap: 20px;              /* Espaço vertical simples entre eles */
+        padding: 40px 0;
+    }
+
+    /* Ajuste também a área do Logo para acompanhar o tamanho dos cards */
+    .LogoArea {
+        width: 85vw;   /* Exatamente o mesmo do seu @media do cardDiv */
+        height: 160px; /* Exatamente o mesmo do seu @media do cardDiv */
+
+    }
+
+    .LogoTexto {
+        font-size: 32px; /* Tamanho fixo legível para o celular */
+    }
+}
+
+/* Faixa de Tablet e Notebooks pequenos */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .SecaoCard {
+        display: grid;
+        /* Força 2 colunas iguais. 1fr significa "uma parte do espaço" */
+        grid-template-columns: 1fr 1fr;
+        /* Define a largura total segura para não quebrar */
+        width: 90vw;
+        margin: 0 auto;
+        /* Gap menor para tablets */
+        gap: 4vw;
+    }
+
+    /* Ajustamos o card para ocupar 100% da coluna do grid */
+    .cardDiv {
+        width: 100% !important;
+        height: 25vw; /* Aumentamos um pouco a altura proporcional no tablet */
+    }
+
+    .LogoArea {
+        /* Se você usou grid no pai, use 100%. Se não, use o valor do card (ex: 42vw) */
+        width: 100%;
+        height: 20vw; /* Certifique-se que esta altura é a mesma do seu card no tablet */
+    }
+}

@@ -1,0 +1,123 @@
+.contain{
+    background: #E2F0D6;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    padding-bottom: 20vw;
+    padding-top: 5vw;
+
+}
+
+.content{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h3{
+    font-size: 250%;
+    color: #214635;
+}
+
+.planos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+
+/*============================================*/
+
+.cardplano{
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 2vw;
+    padding: 3vw;
+    width: 22vw;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.cardplano:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 1px 20px 0px #5b5b5b;
+    transition: 1s;
+}
+
+.cardplano h4{
+    font-size: 180%;
+    color: #214635;
+    margin: 0;
+}
+
+.cardplano .desc{
+    color: #585858;
+    font-size: 100%;
+}
+
+.cardplano .price{
+    font-size: 410%;
+    font-weight: 600;
+    color: #3F3F3F;
+    margin: 2vw 0vw;
+}
+
+.cardplano .linha{
+    width: 100%;
+    height: 0.2vw;
+    background: #bebebe;
+}
+
+.beneficio{
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr 10fr;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.itens{
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5vw;
+}
+
+.beneficio svg{
+    width: 2vw;
+    fill: #214635;
+}
+
+.beneficio p{
+    margin: .2vw 0 0;
+}
+
+.buttonget{
+    padding: 0vw 2vw;
+    background: #214635;
+    border-radius: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+    color: #E2F0D6;
+    font-size: 120%;
+    font-weight: 600;
+    transition: 1s;
+
+}
+
+.buttonget:hover{
+    background: #E2F0D6;
+    color: #214635;
+    border: solid #214635;
+    transition: 1s;
+}

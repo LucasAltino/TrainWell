@@ -1,0 +1,50 @@
+/*.DivComentarios {*/
+/*    margin-top: 8vw;*/
+/*    background-color: #E2F0D6;*/
+/*    padding: 5vw;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*}*/
+
+.ContainerPai {
+    width: 80vw;
+    background: #E2F0D6;
+    border-radius: 2vw;
+    margin: 6vw  auto;
+    padding: 50px;
+
+    /* SOLUÇÃO PARA O TAMANHO: Faz o padding ser calculado DENTRO dos 80vw */
+    box-sizing: border-box;
+
+    /* Garante que o container se ajuste à altura dos cards */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MinhaSwiper {
+    width: 100%; /* Ocupa os 80vw (menos o padding do pai) */
+}
+
+/* SOLUÇÃO PARA A ALTURA: Força o Swiper a esticar os slides */
+.MinhaSwiper :global(.swiper-wrapper) {
+    display: flex;
+    align-items: stretch; /* Faz todos os slides terem a mesma altura da linha */
+}
+
+.MinhaSwiper :global(.swiper-slide) {
+    display: flex; /* Faz o slide se comportar como flex */
+    height: auto;
+    align-items: stretch; /* Centraliza o card se ele for menor que o slide */
+}
+
+/* Importante: No seu Comentario.module.css, o .ComenDiv deve ter height: 100% */
+
+@media (max-width: 768px) {
+    .ContainerPai {
+        width: 95vw; /* Ocupa quase a tela toda */
+        padding: 20px; /* Reduz de 50px para 20px */
+        border-radius: 30px;
+    }
+}
