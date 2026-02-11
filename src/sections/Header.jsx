@@ -1,6 +1,3 @@
-import SecaoVideo from "../sections/SecaoVideo";
-import SecaoCards from "../sections/SecaoCards";
-import SecaoComentarios from "../sections/SecaoComentarios";
 import style from './modules/Header.module.css'
 import logomin from "./images/logomin.png";
 import { useState } from "react";
@@ -69,3 +66,4 @@ function Header(){
 }
 
 export default Header;
+
