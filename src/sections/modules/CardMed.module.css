@@ -1,0 +1,132 @@
+.cardDiv {
+    position: relative; /* Pai precisa ser relativo */
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    width: 35vw;
+    height: 20vw;
+    border-radius: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Importante: Mantemos visible para a cabeça sair do card,
+       mas cuidado se a foto for mais larga que o card */
+    overflow: visible;
+}
+
+.cardDiv:hover {
+    transform: scale(1.05); /* Card cresce um pouco */
+}
+
+.foto {
+    position: absolute; /* Sai do fluxo flex */
+    bottom: 0;          /* TRAVA na base do card */
+
+    /* Se direcao for "row", cola na esquerda. Se for "row-reverse", na direita */
+    /* Você pode controlar isso via props style no JSX ou deixar fixo: */
+    left: 10px;
+
+    height: 100%;       /* Altura original */
+    width: auto;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+    transform-origin: bottom; /* Cresce a partir da base */
+    z-index: 2;
+}
+
+.cardDiv:hover .foto {
+    /* A foto aumenta 20% SEM descolar do bottom: 0 */
+    transform: scale(1.08);
+}
+
+/*.cardDiv {*/
+/*    display: flex;*/
+/*    align-items: center;      !* Centraliza o texto verticalmente em relação ao card *!*/
+/*    justify-content: space-around; !* Dá um espaço entre a foto e o texto *!*/
+/*    background-color: #F2F2F2; !* Cor clara igual à sua imagem de referência *!*/
+/*    width: 35vw;*/
+/*    height: 20vw;            !* Altura fixa para todos os cards ficarem iguais *!*/
+/*    border-radius: 20px;      !* Bordas arredondadas *!*/
+/*    overflow: hidden;         !* Garante que nada escape das bordas arredondadas *!*/
+/*    padding: 0 15px;*/
+/*    box-sizing: border-box;*/
+/*    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);*/
+
+/*    !* Para suavizar a transição se você quiser adicionar hover depois *!*/
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+/*}*/
+/*.cardDiv :hover {*/
+/*    transform: scale(1.1);*/
+/*}*/
+
+
+/*.foto {*/
+/*    height: 100%;!* Faz a foto ocupar toda a altura do card *!*/
+/*    object-fit: contain;      !* Garante que a foto não seja cortada nem esticada *!*/
+/*    align-self: flex-end; !* Faz a base da foto encostar no fundo do card *!*/
+/*}*/
+
+.cargo {
+    font-family: "League Spartan", sans-serif;
+    color: #2A5B01;           /* O verde da sua marca */
+    font-size: 2.5rem;          /* Tamanho grande para o cargo */
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 50%;           /* Impede que o texto empurre a foto */
+    line-height: 1.1;
+    margin-left: 18vw;
+}
+
+
+
+/* ... seu código anterior ... */
+
+@media (max-width: 768px) {
+    .cardDiv {
+        width: 85vw;   /* Aumenta a largura para preencher a tela do celular */
+        height: 160px; /* Altura fixa (usar vw aqui deixaria o card muito fino) */
+        padding: 0 15px;
+    }
+
+    .cargo {
+        font-size: 1.5rem; /* Diminui um pouco a fonte para caber */
+        margin-left: 18vh;
+    }
+
+    .foto {
+        max-width: 50%; /* Garante que a foto não invada o texto no mobile */
+        object-position: bottom; /* Empurra o desenho para o chão da tag img */
+        align-self: flex-end;
+    }
+}
+
+/* Entre o Desktop e o Celular */
+
+
+@media (max-width: 1100px) and (min-width: 769px) {
+    .cardDiv {
+        width: 42vw; /* Aumenta um pouco a largura para o texto respirar */
+        padding: 0 10px;
+    }
+
+    .cargo {
+        font-size: 1.6rem; /* Trava um tamanho legível para essa faixa */
+    }
+}
+
+/* Celular (seu código atualizado) */
+@media (max-width: 1280px) {
+    .cargo {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .cargo {
+        font-size: 1.4rem;
+    }
+}

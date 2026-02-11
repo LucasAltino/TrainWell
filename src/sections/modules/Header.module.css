@@ -1,0 +1,295 @@
+.header{
+    font-family: "League Spartan", sans-serif;
+    background: #E2F0D6;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    justify-items: center;
+    align-items: center;
+    height: 20vh;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.navoption{
+    color: #214635;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.navbutton{
+    background: #214635;
+    font-size: 1.3vw;
+    color: #E2F0D6;
+    padding: 0.8vw 5vw;
+    border-radius: 10vw;
+    transition: 1s;
+}
+
+.navbutton:hover{
+    background: #e6f2da85;
+    border: solid #1f4d3a;
+    color: #1f4d3a;
+    transition: 1s;
+    cursor: pointer;
+}
+
+img{
+    width: 4vw;
+}
+
+.infoheader{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    padding-top: 20vh;
+
+}
+
+.write{
+    width: 70%;
+}
+
+.partone{
+    font-size: 530%;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 1vw;
+    color: #214635;
+
+}
+
+.partwo{
+    font-size: 530%;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
+
+.write p{
+    color: #355746;
+    font-size: 1.5vw;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.down{
+    display: flex;
+    align-items: center;
+}
+
+.partone,
+.partwo,
+.write p,
+.down {
+    position: relative;
+    left: -45vw;           /* posição inicial */
+    opacity: 0;
+
+    animation: slideInLeft 1.2s ease-out forwards;
+}
+
+/* Pequeno atraso em cascata (fica profissional) */
+.partone {
+    animation-delay: 0.1s;
+}
+
+.partwo {
+    animation-delay: 0.25s;
+}
+
+.write p {
+    animation-delay: 0.4s;
+}
+
+.down {
+    animation-delay: 0.55s;
+}
+
+/* Animação */
+@keyframes slideInLeft {
+    from {
+        left: -45vw;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+.planbutton{
+    color: #E2F0D6 !important;
+    background: #214635;
+    padding: 1vw 6vw;
+    border-radius: 10vw;
+    transition: 2s;
+
+}
+
+.planbutton:hover{
+    background: #E2F0D6;
+    border: solid #214635;
+    color: #214635 !important;
+    transition: 1s;
+}
+
+.down svg{
+    width: 2vw;
+    height: 2vw;
+    transform: rotate(225deg);
+    border: solid #214635 0.3vw;
+    border-radius: 10vw;
+    padding: 0.3vw;
+    margin-left: 2vw;
+    color: #214635;
+    fill: #214635;
+}
+
+.fundoimg {
+    background-image: url("../images/headerimg.png");
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 45%;
+    top: 0;
+    right: -45vw; /* posição inicial */
+    z-index: 0;
+
+    animation: slideInRight 1.2s ease-out forwards;
+}
+
+/* Animação */
+@keyframes slideInRight {
+    from {
+        right: -45vw;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.bars{
+    display: none;
+}
+
+.sidebar{
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .partone,
+    .partwo{
+        font-size: 380%;
+    }
+    .fundoimg{
+        display: none;
+    }
+
+    .infoheader{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    img {
+        width: 12vw;
+    }
+    .write{
+        width: 80%;
+    }
+    .write p,
+    .down{
+        width: 75%;
+        font-size: 3.5vw;
+    }
+    .planbutton {
+        padding: 3vw 6vw;
+    }
+    .down svg {
+        width: 9vw;
+        height: fit-content;
+        border: solid #214635 1vw;
+    }
+    .options{
+        display: none;
+    }
+    .bars{
+        display: flex;
+    }
+    .bars svg{
+        width: 13vw;
+        fill: #1f4d3a;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    .nav{
+        display: flex;
+        justify-items: center;
+        height: 15vh;
+        padding-top: 5vw;
+        gap: 40vw;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .planbutton{
+        text-align: center !important;
+    }
+    .sidebar {
+        display: flex;
+        position: fixed;
+        z-index: 10000;
+        width: 60vw;
+        right: -70%;
+        height: 100vh;
+        background: #1f4d3a;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: -12px 1px 33px -8px rgba(0,0,0,0.75);
+        transition: right 0.4s ease;
+    }
+    .open {
+        right: 0;
+    }
+
+
+    .optionstwo{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0vw;
+        flex-direction: column;
+        width: 75%;
+        margin-top: 13vw;
+    }
+    .optionstwo svg{
+        width: 10vw;
+        position: relative;
+        left: 35vw;
+        fill: #e6f2da;
+    }
+
+    .optionstwo p{
+            color: #E2F0D6;
+            font-size: 4.2vw;
+    }
+}
