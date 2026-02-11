@@ -4,7 +4,6 @@ import CardMed from "./components/CardMed";
 import fotoPersoal from './images/personal.png'
 import fotoNutri from './images/nutri.png'
 import fotoTerapia from './images/therapist.png'
-import logo from './images/logon.png'
 
 export default function SecaoCards() {
     return (
@@ -19,4 +18,5 @@ export default function SecaoCards() {
 
         </div>
     )
+
 }
