@@ -3,7 +3,7 @@ import CardPlano from "./components/CardPlano";
 
 function Planos(){
     return (
-        <div className={style.contain}>
+        <div className={style.contain} id='plan'>
             <div className={style.content}>
                 <h3>CHOOSE THE PLAN THAT FITS YOUR JOURNEY!</h3>
                 <div className={style.planos}>
@@ -58,3 +58,4 @@ function Planos(){
 }
 
 export default Planos;
+
