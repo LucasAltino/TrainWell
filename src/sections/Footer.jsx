@@ -3,7 +3,7 @@ import style from './modules/Footer.module.css'
 import logo from './images/logofooter.png'
 function Footer(){
     return (
-        <div className={style.contain}>
+        <div className={style.contain} id='contact'>
             <div className={style.content}>
                 <div className={style.logop}>
                     <img src={logo} alt=""/>
@@ -34,3 +34,4 @@ function Footer(){
 }
 
 export default Footer;
+
