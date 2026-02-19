@@ -7,7 +7,7 @@ import fotoTerapia from './images/therapist.png'
 
 export default function SecaoCards() {
     return (
-        <div className={styles.SecaoCard}>
+        <div className={styles.SecaoCard} id='team'>
             <CardMed cargo="Personal Trainer" fotos={fotoPersoal} />
             <CardMed cargo="Nutricionist" fotos={fotoNutri}/>
             <CardMed cargo="THERAPIST" fotos={fotoTerapia} />
@@ -20,3 +20,4 @@ export default function SecaoCards() {
     )
 
 }
+
