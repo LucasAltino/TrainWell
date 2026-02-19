@@ -38,6 +38,8 @@
     color: #E2F0D6;
     text-decoration: none;
 }
+
+
 .navbuttont a{
     color: #E2F0D6;
     text-decoration: none;
@@ -59,7 +61,7 @@
 .navbutton:hover{
     background: #e6f2da85;
     border: solid #1f4d3a;
-    color: #1f4d3a;
+    color: #214635;
     transition: 1s;
     cursor: pointer;
 }
@@ -311,5 +313,6 @@ img{
     }
 
 }
+
 
 
