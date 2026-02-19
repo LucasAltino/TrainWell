@@ -66,6 +66,10 @@
     cursor: pointer;
 }
 
+.navbutton:hover a{
+    color: #214635;
+}
+
 img{
     width: 4vw;
 }
@@ -313,6 +317,7 @@ img{
     }
 
 }
+
 
 
 
