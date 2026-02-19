@@ -30,6 +30,15 @@
     font-weight: 500;
 }
 
+.navoption a{
+    color: #E2F0D6;
+    text-decoration: none;
+}
+.navoptiont a{
+    color: #E2F0D6;
+    text-decoration: none;
+}
+
 .navbutton{
     background: #214635;
     font-size: 1.3vw;
@@ -292,4 +301,5 @@ img{
             color: #E2F0D6;
             font-size: 4.2vw;
     }
+
 }
