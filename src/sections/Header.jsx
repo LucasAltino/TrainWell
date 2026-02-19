@@ -16,8 +16,8 @@ function Header(){
                             d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/>
                     </svg>
                     <p className={style.navoptiont}><a href="#secao-video">About</a></p>
-                    <p className={style.navoptiont}><a href="#plan">Plans</a></p>
                     <p className={style.navoptiont}><a href="#team">Our team</a></p>
+                    <p className={style.navoptiont}><a href="#plan">Plans</a></p>
                     <p className={style.navoptiont}><a href="#contact">Contact</a></p>
                     <p className={style.navbuttont}><a href="#plan">I want to be part!</a></p>
                 </div>
@@ -27,8 +27,8 @@ function Header(){
                 <img src={logomin} alt=""/>
                 <div className={style.options}>
                     <p className={style.navoption}><a href="#secao-video">About</a></p>
-                    <p className={style.navoption}><a href="#plan">Plans</a></p>
                     <p className={style.navoption}><a href="#team">Our team</a></p>
+                    <p className={style.navoption}><a href="#plan">Plans</a></p>
                     <p className={style.navoption}><a href="#contact">Contact</a></p>
                     <p className={style.navbutton}><a href="#plan">I want to be part!</a></p>
                 </div>
@@ -45,9 +45,9 @@ function Header(){
                 <div className={style.write}>
                     <h2 className={style.partone}>We Take Care Of Your</h2>
                     <h2 className={style.partwo}>Health.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum dapibus vestibulum.
-                        Donec vehicula rhoncus dui a mattis. Donec non metus feugiat, tristique diam ut, posuere
-                        leo.</p>
+                    <p>TrainWell Company is a wellness-focused company that integrates fitness training, nutrition, and mental health support into one complete and personalized plan.
+
+Their approach goes beyond traditional workout programs by combining personal training, nutritional guidance, and therapy to create sustainable, long-term results. With flexible plans and continuous support, TrainWell helps individuals build healthier habits, improve performance, and achieve balance in both body and mind.</p>
                     <div className={style.down}>
                         <p className={style.planbutton}>See the plans</p>
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -66,5 +66,6 @@ function Header(){
 }
 
 export default Header;
+
 
 
