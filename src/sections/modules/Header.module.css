@@ -34,6 +34,14 @@
     color: #214635;
     text-decoration: none;
 }
+.navbutton a{
+    color: #E2F0D6;
+    text-decoration: none;
+}
+.navbuttont a{
+    color: #E2F0D6;
+    text-decoration: none;
+}
 .navoptiont a{
     color: #E2F0D6;
     text-decoration: none;
@@ -303,4 +311,5 @@ img{
     }
 
 }
+
 
