@@ -47,7 +47,7 @@ function Header(){
                     <h2 className={style.partwo}>Health.</h2>
                     <p>TrainWell Company is a wellness-focused company that integrates fitness training, nutrition, and mental health support into one complete and personalized plan.
 
-Their approach goes beyond traditional workout programs by combining personal training, nutritional guidance, and therapy to create sustainable, long-term results. With flexible plans and continuous support, TrainWell helps individuals build healthier habits, improve performance, and achieve balance in both body and mind.</p>
+Their approach goes beyond traditional workout programs by combining personal training, nutritional guidance, and therapy to create sustainable, long-term results.</p>
                     <div className={style.down}>
                         <p className={style.planbutton}>See the plans</p>
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +66,7 @@ Their approach goes beyond traditional workout programs by combining personal tr
 }
 
 export default Header;
+
 
 
 
