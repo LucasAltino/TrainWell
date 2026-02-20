@@ -13,7 +13,7 @@ function SecaoVideo() {
 
                 <iframe
                     className={styles.VideoYoutube}
-                    src="https://youtu.be/hBEKGBLAB80?si=PIqhiOBikxJv_HAw"
+                    src="https://youtu.be/hBEKGBLAB80?si=bYvxVXPRGQTc23V5"
                     title="YouTube video"
                     allowFullScreen
                 ></iframe>
@@ -34,3 +34,4 @@ function SecaoVideo() {
 
 
 export default SecaoVideo;
+
